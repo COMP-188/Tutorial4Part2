@@ -5,7 +5,11 @@
  *  \version   0.1
  *  \date      04.04.2021
  */
+#include "matrix.h"
+
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 
 
@@ -19,9 +23,12 @@ int menu();
  */
 int main()
 {
-
+    const int MAX_ROW = 5;
 
     int choice;
+    double matrix[MAX_ROW][MAX_COL] = {0};
+
+    srand(time(NULL));
 
     cout << " Welcome to the drawer \n";
 
@@ -35,8 +42,10 @@ int main()
         case 2:// Sum of col
             break;
         case 3://fill random
+            fillWithRandom(matrix, MAX_ROW);
             break;
         case 4://print matrix
+            printMatrix(matrix, MAX_ROW);
             break;
         case 5://option 1
             break;
