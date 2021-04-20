@@ -50,7 +50,7 @@ void sumOfCol(const double mat[][MAX_COL], const int maxRow) {
 	for (i = 0; i < maxRow; i++) {
 		int sum = 0;
 		for (int j = 0; j < MAX_COL; j++) {
-			sum = mat[j][i];
+			sum += mat[j][i];
 		}
 		cout << "\nThe sum of column " << i << " is " << sum << endl;
 	}
