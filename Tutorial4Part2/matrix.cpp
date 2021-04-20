@@ -28,7 +28,7 @@ void fillWithRandom(double mat[][MAX_COL], const int maxRow) {
 }
 void printMatrix(const double mat[][MAX_COL], const int maxRow) {
 	cout << endl;
-	for (int i = 0; i < maxRow; i++) {
+	for (int i = 0; i < maxRow + 1; i++) {
 		for (int j = 0; j < MAX_COL; j++) {
 			cout << setw(4) << right << mat[i][j];
 		}
@@ -50,7 +50,7 @@ void sumOfCol(const double mat[][MAX_COL], const int maxRow) {
 	for (i = 0; i < maxRow; i++) {
 		int sum = 0;
 		for (int j = 0; j < MAX_COL; j++) {
-			sum += mat[j][i];
+			sum = mat[j][i];
 		}
 		cout << "\nThe sum of column " << i << " is " << sum << endl;
 	}
@@ -68,7 +68,7 @@ int cntOdd(const double mat[][MAX_COL], const int maxRow) {
 	int count = 0;
 	for (int i = 0; i < maxRow; i++) {
 		for (int j = 0; j < MAX_COL; j++) {
-			if ((int)mat[i][j] % 2 == 1) count++;
+			if ((int)mat[i][j] % 2 == 0) count++;
 		}
 	}
 	return count;
