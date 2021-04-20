@@ -15,8 +15,12 @@ const double MIN_VAL = 0.0;
 
   // Prototypes
 void fillWithRandom(double mat[][MAX_COL], const int maxRow);
-void printMatrix(const double mat[][MAX_COL], const int naxROW);
-
+void printMatrix(const double mat[][MAX_COL], const int maxROW);
+void sumOfRows(const double mat[][MAX_COL], const int maxRow);
+void sumOfCol(const double mat[][MAX_COL], const int maxRow);
+int cntEven(const double mat[][MAX_COL], const int maxRow);
+int cntOdd(const double mat[][MAX_COL], const int maxRow);
+int totalSum(const double mat[][MAX_COL], const int maxRow);
 
 
 #endif /* MATRIX_H */

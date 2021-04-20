@@ -35,3 +35,52 @@ void printMatrix(const double mat[][MAX_COL], const int maxRow) {
 		cout << endl;
 	}
 }
+void sumOfRows(const double mat[][MAX_COL], const int maxRow) {
+	int j;
+	for (int i = 0; i < maxRow; i++) {
+		int sum = 0;
+		for (j = 0; j < MAX_COL; j++) {
+			sum += mat[i][j];
+		}
+		cout << "\nThe sum of row " << j << " is " << sum << endl;
+	}
+}
+void sumOfCol(const double mat[][MAX_COL], const int maxRow) {
+	int i;
+	for (i = 0; i < maxRow; i++) {
+		int sum = 0;
+		for (int j = 0; j < MAX_COL; j++) {
+			sum += mat[j][i];
+		}
+		cout << "\nThe sum of column " << i << " is " << sum << endl;
+	}
+}
+int cntEven(const double mat[][MAX_COL], const int maxRow) {
+	int count = 0;
+	for (int i = 0; i < maxRow; i++) {
+		for (int j = 0; j < MAX_COL; j++) {
+			if ((int)mat[i][j] % 2 == 0) count++;
+		}
+	}
+	return count;
+}
+int cntOdd(const double mat[][MAX_COL], const int maxRow) {
+	int count = 0;
+	for (int i = 0; i < maxRow; i++) {
+		for (int j = 0; j < MAX_COL; j++) {
+			if ((int)mat[i][j] % 2 == 1) count++;
+		}
+	}
+	return count;
+}
+int totalSum(const double mat[][MAX_COL], const int maxRow) {
+	int total = 0;
+	for (int i = 0; i < maxRow; i++) {
+		for (int j = 0; j < MAX_COL; j++) {
+			total += (int)mat[i][j];
+		}
+	}
+	return total;
+}
+
+

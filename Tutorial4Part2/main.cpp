@@ -38,20 +38,27 @@ int main()
 
         switch (choice) {
         case 1:// Sum of row
-            break;
-        case 2:// Sum of col
-            break;
-        case 3://fill random
             fillWithRandom(matrix, MAX_ROW);
             break;
-        case 4://print matrix
+        case 2:// Sum of col
             printMatrix(matrix, MAX_ROW);
             break;
-        case 5://option 1
+        case 3://fill random
+            sumOfRows(matrix, MAX_ROW);
             break;
-        case 6://option 2
+        case 4://print matrix
+            sumOfCol(matrix, MAX_ROW);
             break;
-        case 7://option 3
+        case 5://even cnt
+            cout << "\nThere are " << cntEven(matrix, MAX_ROW) << " even numbers" << endl;
+
+            break;
+        case 6://odd cnt
+            cout << "\nThere are " << cntOdd(matrix, MAX_ROW) << " odd numbers" << endl;
+
+            break;
+        case 7://total sum
+            cout << "\nThe total sum is: " << totalSum(matrix, MAX_ROW) << endl;
             break;
         case 8: //exit
             break;
@@ -63,7 +70,7 @@ int main()
 
     } while (choice != 8);
 
-    cout << "Bye Bye!";
+    cout << "\nBye Bye!\n";
 }
 
 /**
@@ -74,13 +81,13 @@ int main()
 int menu() {
     int choice;
 
-    cout << "\n      1) Sum of rows\n";
-    cout << "      2) Sum of columns\n";
-    cout << "      3) Fill random\n";
-    cout << "      4) Print\n";
-    cout << "      5) option 1\n";
-    cout << "      6) option 2\n";
-    cout << "      7) option 3\n";
+    cout << "\n      1) Fill random\n";
+    cout << "      2) Print matrix\n";
+    cout << "      3) Sum of rows\n";
+    cout << "      4) Sum of columns\n";
+    cout << "      5) Count even\n";
+    cout << "      6) Count odd\n";
+    cout << "      7) Total sum\n";
     cout << "      8) Exit\n";
 
     cout << "Enter a choice: ";
