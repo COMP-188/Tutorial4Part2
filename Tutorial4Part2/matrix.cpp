@@ -28,7 +28,7 @@ void fillWithRandom(double mat[][MAX_COL], const int maxRow) {
 }
 void printMatrix(const double mat[][MAX_COL], const int maxRow) {
 	cout << endl;
-	for (int i = 0; i < maxRow + 1; i++) {
+	for (int i = 0; i < maxRow; i++) {
 		for (int j = 0; j < MAX_COL; j++) {
 			cout << setw(4) << right << mat[i][j];
 		}
