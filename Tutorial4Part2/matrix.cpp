@@ -68,7 +68,7 @@ int cntOdd(const double mat[][MAX_COL], const int maxRow) {
 	int count = 0;
 	for (int i = 0; i < maxRow; i++) {
 		for (int j = 0; j < MAX_COL; j++) {
-			if ((int)mat[i][j] % 2 == 0) count++;
+			if ((int)mat[j][i] % 2 == 1) count++;
 		}
 	}
 	return count;
