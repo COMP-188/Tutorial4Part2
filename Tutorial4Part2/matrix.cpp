@@ -38,7 +38,7 @@ void printMatrix(const double mat[][MAX_COL], const int maxRow) {
 void sumOfRows(const double mat[][MAX_COL], const int maxRow) {
 	int j;
 	for (int i = 0; i < maxRow; i++) {
-		int sum = 0;
+		double sum = 0;
 		for (j = 0; j < MAX_COL; j++) {
 			sum += mat[i][j];
 		}
@@ -48,7 +48,7 @@ void sumOfRows(const double mat[][MAX_COL], const int maxRow) {
 void sumOfCol(const double mat[][MAX_COL], const int maxRow) {
 	int i;
 	for (i = 0; i < maxRow; i++) {
-		int sum = 0;
+		double sum = 0;
 		for (int j = 0; j < MAX_COL; j++) {
 			sum += mat[j][i];
 		}
