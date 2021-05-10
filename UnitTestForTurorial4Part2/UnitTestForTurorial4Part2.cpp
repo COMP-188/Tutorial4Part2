@@ -13,8 +13,6 @@ namespace UnitTestForTurorial4Part2
 		
 		TEST_METHOD(SumOfRowsCheck)
 		{
-			//void sumOfRows(const double mat[][MAX_COL], const int maxRow)
-
 			//Arrange
 			const int ROW = 5;
 			double matrix[ROW][MAX_COL] = { 1.0, 1.0, 1.0, 1.0, 1.0,
@@ -40,8 +38,6 @@ namespace UnitTestForTurorial4Part2
 
 		TEST_METHOD(SumOfColsCheck)
 		{
-			//void sumOfRows(const double mat[][MAX_COL], const int maxRow)
-
 			//Arrange
 			const int ROW = 5;
 			double matrix[ROW][MAX_COL] = { 2.0, 1.0, 1.0, 1.0, 1.0,
@@ -52,7 +48,7 @@ namespace UnitTestForTurorial4Part2
 			};
 			double sum = 0.0;
 			//Act
-			sumOfRows(matrix, ROW);
+			sumOfCol(matrix, ROW);
 
 			//Assert
 			int i;
@@ -64,5 +60,27 @@ namespace UnitTestForTurorial4Part2
 				Assert::AreEqual(6.0, sum);
 			}
 		}
+
+
+		TEST_METHOD(fillWithRandomCheck)
+		{
+			//Arrange
+			const int ROW = 5;
+			double matrix[ROW][MAX_COL] = {};
+			double sum = 0.0;
+			//Act
+			fillWithRandom(matrix, ROW);
+
+			//Assert
+			int i;
+			for (i = 0; i < ROW; i++) {
+				sum = 0;
+				for (int j = 0; j < MAX_COL; j++) {
+					sum += matrix[j][i];
+				}
+				Assert::AreNotEqual(0.0, sum);
+			}
+		}
+
 	};
 }
